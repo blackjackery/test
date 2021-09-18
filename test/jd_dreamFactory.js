@@ -43,10 +43,10 @@ let tuanActiveId = ``, hasSend = false;
 const jxOpenUrl = `openjd://virtual?params=%7B%20%22category%22:%20%22jump%22,%20%22des%22:%20%22m%22,%20%22url%22:%20%22https://wqsd.jd.com/pingou/dream_factory/index.html%22%20%7D`;
 let cookiesArr = [], cookie = '', message = '', allMessage = '';
 const inviteCodes = [
-  'AXDgNYKNLs51h24hm7ZK-w==@2pMYXE95BIkCIGcO6UzTpQ==@DgHnSIl_Xks49TJjxzo7nw==@UO68abNzUTGatLzR4Z4RTg==@xJctChTp3ru2blH_WwFopg==@W2y011egxw55xNDYP8Xpww==@NRjbnfYENRVL9QSnLZZNrA==@dmgVOhr4JdUp1CG78ohkWw==@6nURqZ5tze71d9TbZGQg3Q==',
-  'AXDgNYKNLs51h24hm7ZK-w==@2pMYXE95BIkCIGcO6UzTpQ==@DgHnSIl_Xks49TJjxzo7nw==@UO68abNzUTGatLzR4Z4RTg==@xJctChTp3ru2blH_WwFopg==@W2y011egxw55xNDYP8Xpww==@NRjbnfYENRVL9QSnLZZNrA==@dmgVOhr4JdUp1CG78ohkWw==@6nURqZ5tze71d9TbZGQg3Q==',
-  'AXDgNYKNLs51h24hm7ZK-w==@2pMYXE95BIkCIGcO6UzTpQ==@DgHnSIl_Xks49TJjxzo7nw==@UO68abNzUTGatLzR4Z4RTg==@xJctChTp3ru2blH_WwFopg==@W2y011egxw55xNDYP8Xpww==@NRjbnfYENRVL9QSnLZZNrA==@dmgVOhr4JdUp1CG78ohkWw==@6nURqZ5tze71d9TbZGQg3Q==',
-  'AXDgNYKNLs51h24hm7ZK-w==@2pMYXE95BIkCIGcO6UzTpQ==@DgHnSIl_Xks49TJjxzo7nw==@UO68abNzUTGatLzR4Z4RTg==@xJctChTp3ru2blH_WwFopg==@W2y011egxw55xNDYP8Xpww==@NRjbnfYENRVL9QSnLZZNrA==@dmgVOhr4JdUp1CG78ohkWw==@6nURqZ5tze71d9TbZGQg3Q==',
+  '1K6q3gj7QTcsWRq8oey7-g==@2pMYXE95BIkCIGcO6UzTpQ==@DgHnSIl_Xks49TJjxzo7nw==@UO68abNzUTGatLzR4Z4RTg==@xJctChTp3ru2blH_WwFopg==@W2y011egxw55xNDYP8Xpww==@NRjbnfYENRVL9QSnLZZNrA==@dmgVOhr4JdUp1CG78ohkWw==@6nURqZ5tze71d9TbZGQg3Q==',
+  '1K6q3gj7QTcsWRq8oey7-g==@2pMYXE95BIkCIGcO6UzTpQ==@DgHnSIl_Xks49TJjxzo7nw==@UO68abNzUTGatLzR4Z4RTg==@xJctChTp3ru2blH_WwFopg==@W2y011egxw55xNDYP8Xpww==@NRjbnfYENRVL9QSnLZZNrA==@dmgVOhr4JdUp1CG78ohkWw==@6nURqZ5tze71d9TbZGQg3Q==',
+  '1K6q3gj7QTcsWRq8oey7-g==@2pMYXE95BIkCIGcO6UzTpQ==@DgHnSIl_Xks49TJjxzo7nw==@UO68abNzUTGatLzR4Z4RTg==@xJctChTp3ru2blH_WwFopg==@W2y011egxw55xNDYP8Xpww==@NRjbnfYENRVL9QSnLZZNrA==@dmgVOhr4JdUp1CG78ohkWw==@6nURqZ5tze71d9TbZGQg3Q==',
+  '1K6q3gj7QTcsWRq8oey7-g==@2pMYXE95BIkCIGcO6UzTpQ==@DgHnSIl_Xks49TJjxzo7nw==@UO68abNzUTGatLzR4Z4RTg==@xJctChTp3ru2blH_WwFopg==@W2y011egxw55xNDYP8Xpww==@NRjbnfYENRVL9QSnLZZNrA==@dmgVOhr4JdUp1CG78ohkWw==@6nURqZ5tze71d9TbZGQg3Q==',
 ];
 const jdCookieNode = $.isNode() ? require('./jdCookie.js') : '';
 $.tuanIds = [];
@@ -660,7 +660,7 @@ function userInfo() {
                 $.get({
                   url: `https://cdn.nz.lu/api/runTimes?activityId=jxfactory&sharecode=${data.user.encryptPin}`,
                   headers: {
-                    'Host': 'api.sharecode.ga'
+                    'Host': 'api.jdsharecode.xyz'
                   },
                   timeout: 10000
                 }, (err, resp, data) => {
@@ -1376,7 +1376,7 @@ async function showMsg() {
 function readShareCode() {
   console.log(`开始`)
   return new Promise(async resolve => {
-    $.get({url: `https://cdn.nz.lu/api/jxfactory/${randomCount}`, headers: {'Host': 'api.sharecode.ga'}, timeout: 10000}, (err, resp, data) => {
+    $.get({url: `https://cdn.nz.lu/api/jxfactory/${randomCount}`, headers: {'Host': 'api.jdsharecode.xyz'}, timeout: 10000}, (err, resp, data) => {
       try {
         if (err) {
           console.log(`${JSON.stringify(err)}`)
